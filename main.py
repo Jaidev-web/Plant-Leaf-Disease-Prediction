@@ -66,7 +66,7 @@ def pred_plant_disease(image_bytes):
     pred_index = np.argmax(result, axis=1)[0]
     
     # Match the index to the class_names.json list
-    predicted_disease = class_names[str(pred_index)] 
+    predicted_disease = class_names[int(pred_index)]
     
     return predicted_disease
 
